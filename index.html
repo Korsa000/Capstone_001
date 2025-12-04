@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample HTML Page</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 40%, #f7f9fb 100%);
+      color: #1b1f23;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0a0f2d;
+      color: #ffffff;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    nav {
+      background: #10163a;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.75rem 1rem;
+    }
+
+    nav a {
+      color: #dce6ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    section {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 16px 32px rgba(0, 28, 77, 0.08);
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: #0a0f2d;
+      letter-spacing: 0.2px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .hero figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    .hero img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      border: 1px solid #e3e8f0;
+      border-radius: 10px;
+      padding: 1rem;
+      background: #f9fbff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.25rem 1rem 2rem;
+      color: #4a5568;
+    }
+
+    footer a {
+      color: #1e3a8a;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Example HTML Layout</h1>
+    <p>A quick illustration of semantic tags, styling, and responsive grids.</p>
+  </header>
+
+  <nav aria-label="Primary">
+    <a href="#intro">Intro</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="intro" class="hero">
+      <div>
+        <h2>Welcome</h2>
+        <p>
+          This page showcases how to combine structural HTML elements with basic CSS to create
+          an accessible, responsive layout. Resize your browser to see how the grid adapts to
+          smaller screens.
+        </p>
+        <ul>
+          <li>Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;section&gt;</code>.</li>
+          <li>Reusable utility classes for grids and cards.</li>
+          <li>Lightweight, embedded styling with sensible defaults.</li>
+        </ul>
+      </div>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="Team collaborating at a table">
+        <figcaption>Responsive images with captions inside a grid layout.</figcaption>
+      </figure>
+    </section>
+
+    <section id="features">
+      <h2>Feature Cards</h2>
+      <div class="columns">
+        <article class="card">
+          <h3>Accessibility</h3>
+          <p>Include labels, landmarks, and sufficient color contrast to make your page usable by everyone.</p>
+        </article>
+        <article class="card">
+          <h3>Responsive Grid</h3>
+          <p>Use <code>grid-template-columns: repeat(auto-fit, minmax(...))</code> to let cards wrap gracefully.</p>
+        </article>
+        <article class="card">
+          <h3>Reusable Styles</h3>
+          <p>Create small, composable classes to share padding, borders, and alignment across components.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <p>
+        Have questions about this example? Replace the content with your own text, swap the color palette,
+        or extract the CSS into a separate file to reuse elsewhere.
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a><br>
+        <strong>Phone:</strong> (555) 123-4567
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Crafted with semantic HTML, modern CSS, and a focus on readability. <a href="#top">Back to top</a>.
+  </footer>
+</body>
+</html>
